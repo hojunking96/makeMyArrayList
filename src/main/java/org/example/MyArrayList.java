@@ -1,8 +1,6 @@
 package org.example;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class MyArrayList<T> {
 
@@ -20,8 +18,7 @@ public class MyArrayList<T> {
         size++;
         if (capacity == size) {
             capacity += 10;
-            Object[] newArray = Arrays.copyOf(array, size);
-            array = newArray;
+            array = Arrays.copyOf(array, size);
         }
         array[size - 1] = element;
         return true;
