@@ -60,7 +60,7 @@ public class MyArrayList<T> {
     }
 
     public boolean isEmpty() {
-        return false;
+        return size == 0;
     }
 
     public void clear() {
