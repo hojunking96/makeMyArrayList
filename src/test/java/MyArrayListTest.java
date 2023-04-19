@@ -12,12 +12,12 @@ class MyArrayListTest {
         list = new MyArrayList<>();
     }
 
-//    @Test
-//    void testAdd() {
-//        assertTrue(list.add("Element1"));
-//        assertEquals(1, list.size());
-//        assertEquals("Element1", list.get(0));
-//    }
+    @Test
+    void testAdd() {
+        assertTrue(list.add("Element1"));
+        assertEquals(1, list.size());
+        assertEquals("Element1", list.get(0));
+    }
 //
 //    @Test
 //    void testRemove() {
