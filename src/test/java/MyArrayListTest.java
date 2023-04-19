@@ -44,13 +44,13 @@ class MyArrayListTest {
         assertEquals(3, list.size());
     }
 
-//    @Test
-//    void testContains() {
-//        list.add("Element1");
-//        list.add("Element2");
-//        assertTrue(list.contains("Element1"));
-//        assertFalse(list.contains("Element3"));
-//    }
+    @Test
+    void testContains() {
+        list.add("Element1");
+        list.add("Element2");
+        assertTrue(list.contains("Element1"));
+        assertFalse(list.contains("Element3"));
+    }
 //
 //    @Test
 //    void testIndexOf() {

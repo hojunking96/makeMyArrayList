@@ -41,8 +41,13 @@ public class MyArrayList<T> {
         return removedObject;
     }
 
-    public void contain() {
-
+    public boolean contains(Object object) {
+        for (int i = 0; i < size; i++) {
+            if (array[i].equals(object)) {
+                return true;
+            }
+        }
+        return false;
     }
 
 
