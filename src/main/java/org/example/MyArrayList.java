@@ -50,6 +50,14 @@ public class MyArrayList<T> {
         return false;
     }
 
+    public int indexOf(Object object) {
+        for (int i = 0; i < size; i++) {
+            if (array[i].equals(object)) {
+                return i;
+            }
+        }
+        return -1;
+    }
 
     public boolean isEmpty() {
         return false;
@@ -59,7 +67,4 @@ public class MyArrayList<T> {
 
     }
 
-    public void indexOf() {
-
-    }
 }

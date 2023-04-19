@@ -51,17 +51,17 @@ class MyArrayListTest {
         assertTrue(list.contains("Element1"));
         assertFalse(list.contains("Element3"));
     }
-//
-//    @Test
-//    void testIndexOf() {
-//        list.add("Element1");
-//        list.add("Element2");
-//        list.add("Element1");
-//        assertEquals(0, list.indexOf("Element1"));
-//        assertEquals(1, list.indexOf("Element2"));
-//        assertEquals(-1, list.indexOf("Element3"));
-//    }
-//
+
+    @Test
+    void testIndexOf() {
+        list.add("Element1");
+        list.add("Element2");
+        list.add("Element1");
+        assertEquals(0, list.indexOf("Element1"));
+        assertEquals(1, list.indexOf("Element2"));
+        assertEquals(-1, list.indexOf("Element3"));
+    }
+
 //    @Test
 //    void testClear() {
 //        list.add("Element1");
