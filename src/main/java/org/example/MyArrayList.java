@@ -64,7 +64,8 @@ public class MyArrayList<T> {
     }
 
     public void clear() {
-
+        size = 0;
+        capacity = 10;
+        array = new Object[capacity];
     }
-
 }

@@ -74,7 +74,6 @@ class MyArrayListTest {
         assertTrue(list.isEmpty());
     }
 
-
     @Test
     void testClear() {
         list.add("Element1");
