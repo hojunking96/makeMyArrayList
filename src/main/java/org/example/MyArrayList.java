@@ -1,23 +1,29 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class MyArrayList<T> {
 
-
     private Object[] array;
     private int size;
+    private int capacity;
 
     public MyArrayList() {
         this.size = 0;
-        this.array = new Object[size];
+        this.capacity = 10;
+        this.array = new Object[capacity];
     }
 
     public boolean add(T element) {
-        array = new Object[size + 1];
-        array[size] = element;
         size++;
+        if (capacity == size) {
+            capacity += 10;
+            Object[] newArray = Arrays.copyOf(array, size);
+            array = newArray;
+        }
+        array[size - 1] = element;
         return true;
     }
 
@@ -29,8 +35,10 @@ public class MyArrayList<T> {
         return array[index];
     }
 
-    public void remove() {
-
+    public Object remove(int index) {
+        size--;
+        Object removedObject = get(index);
+        return removedObject;
     }
 
     public void contain() {
