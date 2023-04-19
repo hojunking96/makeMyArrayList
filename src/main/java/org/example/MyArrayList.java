@@ -28,17 +28,19 @@ public class MyArrayList<T> {
         return size;
     }
 
-    public Object get(int index) {
-        return array[index];
+    @SuppressWarnings("unchecked")
+    public T get(int index) {
+        return (T) array[index];
     }
 
-    public Object remove(int index) {
+    public T remove(int index) {
         size--;
-        Object removedObject = get(index);
+        T removedObject = get(index);
         return removedObject;
     }
 
-    public boolean contains(Object object) {
+
+    public boolean contains(T object) {
         for (int i = 0; i < size; i++) {
             if (array[i].equals(object)) {
                 return true;
@@ -47,7 +49,7 @@ public class MyArrayList<T> {
         return false;
     }
 
-    public int indexOf(Object object) {
+    public int indexOf(T object) {
         for (int i = 0; i < size; i++) {
             if (array[i].equals(object)) {
                 return i;
