@@ -4,10 +4,12 @@ package org.example;
 public class MyHashMap<K, V> {
     private MyArrayList<K> keys;
     private MyArrayList<V> values;
+    private int size;
 
     public MyHashMap() {
         this.keys = new MyArrayList<>();
         this.values = new MyArrayList<>();
+        this.size = 0;
     }
 
     public V put(K key, V value) {
@@ -16,15 +18,16 @@ public class MyHashMap<K, V> {
         }
         keys.add(key);
         values.add(value);
+        size++;
         return null;
     }
 
     public int size() {
-        return keys.size();
+        return size;
     }
 
     public V get(K key) {
-        for (int i = 0; i < keys.size(); i++) {
+        for (int i = 0; i < size; i++) {
             if (keys.get(i).equals(key)) {
                 return values.get(i);
             }
@@ -33,11 +36,12 @@ public class MyHashMap<K, V> {
     }
 
     public V remove(K key) {
-        for (int i = 0; i < keys.size(); i++) {
+        for (int i = 0; i < size; i++) {
             if (keys.get(i).equals(key)) {
                 V value = values.get(i);
                 values.remove(i);
                 keys.remove(i);
+                size--;
                 return value;
             }
         }
@@ -46,7 +50,7 @@ public class MyHashMap<K, V> {
 
 
     public boolean containsKey(K key) {
-        for (int i = 0; i < keys.size(); i++) {
+        for (int i = 0; i < size; i++) {
             if (keys.get(i).equals(key)) {
                 return true;
             }
@@ -55,7 +59,7 @@ public class MyHashMap<K, V> {
     }
 
     public boolean containsValue(V value) {
-        for (int i = 0; i < values.size(); i++) {
+        for (int i = 0; i < size; i++) {
             if (values.get(i).equals(value)) {
                 return true;
             }
@@ -64,12 +68,12 @@ public class MyHashMap<K, V> {
     }
 
     public void clear() {
-        this.keys = new MyArrayList<>();
-        this.values = new MyArrayList<>();
+        keys = new MyArrayList<>();
+        values = new MyArrayList<>();
+        size = 0;
     }
 
     public boolean isEmpty() {
         return keys.isEmpty();
     }
-
 }
