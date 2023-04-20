@@ -13,22 +13,17 @@ public class MyHashMap<K, V> {
         this.values = new ArrayList<>();
     }
 
-    public Integer put(K key, V value) {
-        if (!keys.contains(key)) {
-            keys.add(key);
-            values.add(value);
-            return null;
-        } else {
-            return keys.indexOf(key);
+    public V put(K key, V value) {
+        if (keys.contains(key)) {
+            return get(key);
         }
+        keys.add(key);
+        values.add(value);
+        return null;
     }
 
     public int size() {
         return keys.size();
-    }
-
-    public void replace() {
-
     }
 
     public V get(K key) {
@@ -40,17 +35,27 @@ public class MyHashMap<K, V> {
         return null;
     }
 
-    public void remove() {
-
+    public V remove(K key) {
+        return null;
     }
 
 
-    public void containsKey() {
-
+    public boolean containsKey(K key) {
+        for (K element : keys) {
+            if (element.equals(key)) {
+                return true;
+            }
+        }
+        return false;
     }
 
-    public void containsValue() {
-
+    public boolean containsValue(V value) {
+        for (V element : values) {
+            if (element.equals(value)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void clear() {
