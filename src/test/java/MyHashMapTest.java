@@ -25,13 +25,13 @@ public class MyHashMapTest {
 //        assertEquals(1, map.size());
 //    }
 //
-//    @Test
-//    void testGet() {
-//        map.put("Key1", 1);
-//        map.put("Key2", 2);
-//        assertEquals(Integer.valueOf(1), map.get("Key1"));
-//        assertEquals(Integer.valueOf(2), map.get("Key2"));
-//    }
+    @Test
+    void testGet() {
+        map.put("Key1", 1);
+        map.put("Key2", 2);
+        assertEquals(Integer.valueOf(1), map.get("Key1"));
+        assertEquals(Integer.valueOf(2), map.get("Key2"));
+    }
 //
 //    @Test
 //    void testRemove() {

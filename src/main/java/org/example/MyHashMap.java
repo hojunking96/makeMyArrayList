@@ -31,8 +31,13 @@ public class MyHashMap<K, V> {
 
     }
 
-    public void get() {
-
+    public V get(K key) {
+        for (int i = 0; i < keys.size(); i++) {
+            if (keys.get(i).equals(key)) {
+                return values.get(i);
+            }
+        }
+        return null;
     }
 
     public void remove() {
