@@ -33,14 +33,14 @@ public class MyHashMapTest {
         assertEquals(Integer.valueOf(2), map.get("Key2"));
     }
 
-//    @Test
-//    void testRemove() {
-//        map.put("Key1", 1);
-//        map.put("Key2", 2);
-//        assertEquals(Integer.valueOf(1), map.remove("Key1"));
-//        assertNull(map.remove("Key3"));
-//        assertEquals(1, map.size());
-//    }
+    @Test
+    void testRemove() {
+        map.put("Key1", 1);
+        map.put("Key2", 2);
+        assertEquals(Integer.valueOf(1), map.remove("Key1"));
+        assertNull(map.remove("Key3"));
+        assertEquals(1, map.size());
+    }
 
     @Test
     void testSize() {

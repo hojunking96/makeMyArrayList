@@ -36,6 +36,14 @@ public class MyHashMap<K, V> {
     }
 
     public V remove(K key) {
+        for (int i = 0; i < keys.size(); i++) {
+            if (keys.get(i).equals(key)) {
+                V value = values.get(i);
+                values.remove(i);
+                keys.remove(i);
+                return value;
+            }
+        }
         return null;
     }
 
