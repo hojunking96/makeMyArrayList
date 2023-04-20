@@ -43,9 +43,7 @@ public class MyArrayList<T> {
         if (size <= capacity - 15) {
             capacity -= 10;
             Object[] newArray = new Object[capacity];
-            for (int i = 0; i < capacity; i++) {
-                newArray[i] = array[i];
-            }
+            System.arraycopy(array, 0, newArray, 0, capacity);
             array = newArray;
         }
 

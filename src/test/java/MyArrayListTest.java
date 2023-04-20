@@ -38,9 +38,7 @@ class MyArrayListTest {
 
     @Test
     void getExceptionTest() {
-        assertThrows(IndexOutOfBoundsException.class, () -> {
-                    list.get(0);
-                });
+        assertThrows(IndexOutOfBoundsException.class, () -> list.get(0));
     }
 
     @Test
