@@ -1,16 +1,13 @@
 package org.example;
 
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class MyHashMap<K, V> {
-    private List<K> keys;
-    private List<V> values;
+    private MyArrayList<K> keys;
+    private MyArrayList<V> values;
 
     public MyHashMap() {
-        this.keys = new ArrayList<>();
-        this.values = new ArrayList<>();
+        this.keys = new MyArrayList<>();
+        this.values = new MyArrayList<>();
     }
 
     public V put(K key, V value) {
@@ -49,8 +46,8 @@ public class MyHashMap<K, V> {
 
 
     public boolean containsKey(K key) {
-        for (K element : keys) {
-            if (element.equals(key)) {
+        for (int i = 0; i < keys.size(); i++) {
+            if (keys.get(i).equals(key)) {
                 return true;
             }
         }
@@ -58,8 +55,8 @@ public class MyHashMap<K, V> {
     }
 
     public boolean containsValue(V value) {
-        for (V element : values) {
-            if (element.equals(value)) {
+        for (int i = 0; i < values.size(); i++) {
+            if (values.get(i).equals(value)) {
                 return true;
             }
         }
@@ -67,8 +64,8 @@ public class MyHashMap<K, V> {
     }
 
     public void clear() {
-        keys = new ArrayList<>();
-        values = new ArrayList<>();
+        this.keys = new MyArrayList<>();
+        this.values = new MyArrayList<>();
     }
 
     public boolean isEmpty() {
