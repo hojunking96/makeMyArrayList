@@ -70,8 +70,8 @@ public class MyHashMap<K, V> {
 
     }
 
-    public void isEmpty() {
-
+    public boolean isEmpty() {
+        return keys.isEmpty();
     }
 
 }
