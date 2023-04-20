@@ -66,8 +66,10 @@ public class MyHashMap<K, V> {
         return false;
     }
 
-    public void clear() {
-
+    public int clear() {
+        keys = new ArrayList<>();
+        values = new ArrayList<>();
+        return keys.size();
     }
 
     public boolean isEmpty() {
