@@ -37,6 +37,13 @@ class MyArrayListTest {
     }
 
     @Test
+    void getExceptionTest() {
+        assertThrows(IndexOutOfBoundsException.class, () -> {
+                    list.get(0);
+                });
+    }
+
+    @Test
     void testSize() {
         list.add("Element1");
         list.add("Element2");

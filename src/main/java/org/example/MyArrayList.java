@@ -30,12 +30,15 @@ public class MyArrayList<T> {
 
     @SuppressWarnings("unchecked")
     public T get(int index) {
+        if (index >= size) {
+            throw new IndexOutOfBoundsException();
+        }
         return (T) array[index];
     }
 
     public T remove(int index) {
-        size--;
         T removedObject = get(index);
+        size--;
         return removedObject;
     }
 
