@@ -39,6 +39,16 @@ public class MyArrayList<T> {
     public T remove(int index) {
         T removedObject = get(index);
         size--;
+
+        if (size <= capacity - 15) {
+            capacity -= 10;
+            Object[] newArray = new Object[capacity];
+            for (int i = 0; i < capacity; i++) {
+                newArray[i] = array[i];
+            }
+            array = newArray;
+        }
+
         return removedObject;
     }
 
